@@ -4,9 +4,13 @@ Attention Network for Personalized Recommendation. Here are the brief introducti
 
 ## Environments
 boto3==1.36.23
+
 numpy==2.2.5
+
 pandas==2.2.3
+
 sentence_transformers==4.1.0
+
 tensorflow==2.17.0
 
 ## Datasets
