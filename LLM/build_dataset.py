@@ -10,13 +10,12 @@ max_length = 90
 random.seed(1234)
 # Create a boto3 S3 client
 s3 = boto3.client('s3')
-# dataset_list = ['CDs_and_Vinyl', 'Clothing_Shoes_and_Jewelry', 'Digital_Music', 'Office_Products', 'Movies_and_TV', 'Beauty', 'Home_and_Kitchen', 'Video_Games', 'Toys_and_Games', 'Books', 'Electronics']
-dataset_list = ['Digital_Music']
+dataset_list = ['CDs_and_Vinyl', 'Clothing_Shoes_and_Jewelry', 'Digital_Music', 'Office_Products', 'Movies_and_TV', 'Beauty', 'Home_and_Kitchen', 'Video_Games', 'Toys_and_Games', 'Books', 'Electronics']
 
-bucket = 'search-page-template-datasets-devo'
+bucket = 'your-s3-bucket'
 
 for dataset in dataset_list:
-    object_key = f'playground/liangsiq/LLM/processed_data/{dataset}_remap.pkl'
+    object_key = f'processed_data/{dataset}_remap.pkl'
     buffer = io.BytesIO()
     
     # Download the pickle file into memory
@@ -134,7 +133,7 @@ for dataset in dataset_list:
     buffer.seek(0)
     
     # Upload to S3
-    s3_key = f'playground/liangsiq/LLM/LLM_input_data/{dataset}_dataset.pkl'
+    s3_key = f'LLM_input_data/{dataset}_dataset.pkl'
     print(f"Upload postprocessed data to s3...")
     s3.upload_fileobj(buffer, bucket, s3_key)
     print("==============================")
