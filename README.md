@@ -1,6 +1,6 @@
 # C-TLSAN
 This is the implementation for our paper: [C-TLSAN: Content-Enhanced Time-aware Long- and Short-term
-Attention Network for Personalized Recommendation](). This project is an extension of Project [TLSAN: Time-aware Long- and Short-term Attention Network for Next-item Recommendation](https://github.com/TsingZ0/TLSAN). Here are the brief introductions to the dataset and the experiment results. 
+Attention Network for Personalized Recommendation](https://www.arxiv.org/abs/2506.13021). This project is an extension of Project [TLSAN: Time-aware Long- and Short-term Attention Network for Next-item Recommendation](https://github.com/TsingZ0/TLSAN). Here are the brief introductions to the dataset and the experiment results. 
 
 ![](./Images/model_architecture.png)
 Architecture overview of C-TLSAN. User behavior history is divided into long-term and short-term sessions according to timestamps, and a random item from the short-term session is chosen as the prediction target.
